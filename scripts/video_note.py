@@ -19,7 +19,7 @@ import time
 import traceback
 from datetime import date, datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -794,7 +794,8 @@ def doctor_command(args: argparse.Namespace) -> int:
             network[f"{name}_reachable"] = False
     try:
         import requests
-        status = requests.get("https://api.bilibili.com/x/web-interface/nav", timeout=8).status_code
+        status = requests.get("https://www.bilibili.com/", timeout=8,
+                               headers={"User-Agent": "Mozilla/5.0"}).status_code
         network["bilibili_status"] = status
         network["bilibili_reachable"] = status < 500
     except Exception as exc:

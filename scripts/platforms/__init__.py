@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 
-from . import base, bilibili, douyin
+from . import base, bilibili, douyin  # noqa: F401  base 供 CLI 以 platforms.base 访问
 from .base import SkillError
 
 ADAPTERS = [bilibili, douyin]
