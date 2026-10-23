@@ -1,0 +1,49 @@
+{
+  "name": "video-learning-note",
+  "version": "1.0.0",
+  "description": "把 B 站 / 抖音视频整理成 Obsidian 学习笔记的 AI 技能：本地转写、面试题与学习两种模式、自动写库。",
+  "type": "module",
+  "bin": {
+    "video-note": "bin/video-note.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "skill.json",
+    "VERSION",
+    "CHANGELOG.md",
+    "LICENSE",
+    "config.example.json",
+    "references/",
+    "scripts/",
+    "bin/"
+  ],
+  "scripts": {
+    "sync-version": "node scripts/sync-version.mjs",
+    "test": "python3 -m pytest tests -q",
+    "prepublishOnly": "node scripts/check-version.mjs",
+    "prepack": "node scripts/clean.mjs"
+  },
+  "keywords": [
+    "ai-skill",
+    "agents-md",
+    "obsidian",
+    "bilibili",
+    "douyin",
+    "whisper",
+    "transcript",
+    "note-taking"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Me106y/video-learning-note.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Me106y/video-learning-note/issues"
+  },
+  "homepage": "https://github.com/Me106y/video-learning-note#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Me106y"
+}

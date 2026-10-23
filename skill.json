@@ -1,0 +1,16 @@
+{
+  "name": "video-learning-note",
+  "displayName": "视频学习笔记",
+  "description": "把 B 站 / 抖音视频整理成 Obsidian 学习笔记：本地转写、字幕优先、面试题与学习两种模式、Mermaid 思维导图、自动查重与写库。",
+  "version": "1.0.0",
+  "entry": "SKILL.md",
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "sources": [
+    "bilibili",
+    "douyin"
+  ]
+}
